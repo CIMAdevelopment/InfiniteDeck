@@ -11,6 +11,24 @@
 #include "SD.h"
 #include "SPI.h"
 #include <ArduinoJson.h>
+/*
+      --- If you use a ESP32 TouchDown ---
+      - Dustin Watts FT6236 Library (version 1.0.2), https://github.com/DustinWatts/FT6236
+
+      --- If you use a GT911 touchscreen or the esp323248s035 capacitive board ---
+      - TAMCTEC GT911 library (version 1.0.2 or newer), https://github.com/TAMCTec/gt911-arduino
+
+      --- If you use the esp322432s028 resistive board ---
+      - TFT_Touch (Latest), https://github.com/Bodmer/TFT_Touch 
+
+      --- If you use a XPT2046 touchscreen ---
+      - TFT_Touch (Latest), https://github.com/Bodmer/TFT_Touch 
+      - 1. Uncomment the esp322432s028r line
+      - 2. Comment the autobrightness option for the esp322432s028r
+      - 3. Change the resolution to match the resolution for your screen (the screen resolution in the line after #ifdef esp322432s028r)
+      - 4. Change the pins at the touchscreen part for the esp322432s028r somewhere down there to match your pin layout
+      - 5. Try and see if it works
+*/
 
 //SDCARD, change the following things to match your device
 #define SPI_MOSI 23
